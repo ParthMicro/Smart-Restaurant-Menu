@@ -1,0 +1,94 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 11vh;
+    padding: 0rem 1rem;
+    background-color: rgb(51, 105, 51);
+}
+.logo img{
+    height: 300px;
+    width: 300px;
+    padding-top: 20px;
+}
+.navbar ul{
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+
+}
+
+.navbar ul li a:hover{
+    border-bottom: 2px solid white;
+}
+
+.navbar h2{
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn {
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.btn .txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+
+.btn img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #007f00; /* Green color */
+    text-transform: uppercase;
+    margin-top: 50px;
+}

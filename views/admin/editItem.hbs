@@ -1,0 +1,7 @@
+<h1>Edit Item</h1>
+<form action="/admin/edit/{{item._id}}" method="POST">
+  <input type="text" name="name" value="{{item.name}}" required>
+  <input type="text" name="description" value="{{item.description}}" required>
+  <input type="number" name="price" value="{{item.price}}" required>
+  <button type="submit">Update Item</button>
+</form>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restraunt Menu</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    {{#if loginSuccess}}
+    <script>
+        alert('Successfully logged in');
+    </script>
+    {{/if}}
+    <section class="back">
+        <nav class="navbar">
+            <div class="logo"><img src="/images/restaurantBEE.png" alt="logo"></div>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#chef">Our Chef</a></li>
+                <li><a href="#review">Review</a></li>
+                <li>
+                    {{#if naming}}
+                    <div class="user-info">
+                        <p>Welcome, {{naming}}</p>
+
+                    </div>
+                    {{else}}
+                    <a href="/login">Login</a>
+                    {{/if}}
+                </li>
+                <li>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="transparent-button"><i class="fas fa-power-off"></i></button>
+                    </form>
+                </li>
+
+            </ul>
+
+        </nav>
+        <div class="text" id="firstpage">
+            <h2>Welcome to RestaurantBEE</h2>
+            <p>The place where you can be yourselfBEE</p>
+            <a href="#menu">EXPLORE MENU</a>
+        </div>
+    </section>
+
+    <div class="content1" id="about">
+        <h2>About Us</h2>
+        <section class="about-section">
+            <div class="about-content">
+                <p>At our restaurant, we believe in creating a dining experience that goes beyond just great food. We
+                    are passionate about serving delicious dishes made from fresh, locally sourced ingredients, but we
+                    also strive to create a warm and welcoming atmosphere for our guests.
+                    Our chef of chefs is dedicated to crafting unique and flavorful dishes that cater to a variety of
+                    tastes. From classic favorites to innovative creations, we have something for everyone to enjoy.</p>
+            </div>
+            <div class="about-image">
+                <img src="/images/about.jpg" alt="About Us Image">
+        </section>
+    </div>
+    <section class="gallery" id="gallery">
+        <h1 class="heading"> Our GALLERY</h1>
+        <div class="image-item">
+            <div class="gallery images">
+                <div class="gallery-img"><img src="images/image4.jpg" alt=""></div>
+                <div class="gallery-img"><img src="images/image6.jpg" alt=""></div>
+                <div class="gallery-img"><img src="images/image7.jpg" alt=""></div>
+                <div class="gallery-img"><img src="images/image1.png" alt=""></div>
+                <div class="gallery-img"><img src="images/image2.png" alt=""></div>
+                <div class="gallery-img"><img src="images/image3.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="content2" id="menu">
+        <h2>What CUISINE you wanna have ?</h2>
+        <div class="button-container">
+            <div class="row">
+                <a href="/maharashtra" class="button">
+                    <img src="images/maharashtra.png" alt="maharashtra">
+                    <span class="txt">Marathi</span>
+                </a>
+                <a href="/gujarat" class="button">
+                    <img src="images/gujrat.png" alt="guj">
+                    <span class="txt">Gujarati</span>
+                </a>
+                <a href="/southindian" class="button">
+                    <img src="images/south india.png" alt="suth">
+                    <span class="txt">South Indian</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <section class="chef" id="chef">
+
+        <h1 class="heading1">Our Chef</h1>
+
+        <div class="box-container" data-aos="fade-up">
+
+            <div class="box">
+                <img src="images/chef1.jpg" alt="">
+                <h3>Vikas Khanna</h3>
+                <div class="share">
+                    <a href="https://www.facebook.com/VikasKhannaGroup" class="fab fa-facebook-f" target="_blank"></a>
+                    <a href="https://x.com/TheVikasKhanna" class="fab fa-twitter" target="_blank"></a>
+                    <a href="https://www.instagram.com/vikaskhannagroup?igsh=Nm5qZjlwbDFjM3gx" class="fab fa-instagram"
+                        target="_blank"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/chef2.jpg" alt="">
+                <h3>Sanjeev Kapoor</h3>
+                <div class="share">
+                    <a href="https://www.facebook.com/ChefSanjeevKapoor" class="fab fa-facebook-f" target="_blank"></a>
+                    <a href="https://x.com/SanjeevKapoor" class="fab fa-twitter" target="_blank"></a>
+                    <a href="https://www.instagram.com/sanjeevkapoor?igsh=Zm90c2ZuMTcwbm4w" class="fab fa-instagram"
+                        target="_blank"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="/images/chef3.jpg" alt="">
+                <h3>Ranveer Brar</h3>
+                <div class="share">
+                    <a href="https://www.facebook.com/RanveerBrar" class="fab fa-facebook-f" target="_blank"></a>
+                    <a href="https://x.com/ranveerbrar" class="fab fa-twitter" target="_blank"></a>
+                    <a href="https://www.instagram.com/ranveer.brar?igsh=MWV2OWx3Mmd3MHVzOA==" class="fab fa-instagram"
+                        target="_blank"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/chef4.jpg" alt="">
+                <h3>Pankaj Bhadouria</h3>
+                <div class="share">
+                    <a href="https://www.facebook.com/pbhadouria" class="fab fa-facebook-f" target="_blank"></a>
+                    <a href="https://x.com/BhadouriaPankaj" class="fab fa-twitter" target="_blank"></a>
+                    <a href="https://www.instagram.com/masterchefpankajbhadouria?igsh=MWoweHVxYTlvNmFtdg=="
+                        class="fab fa-instagram" target="_blank"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="review" id="review">
+
+        <h4 class="heading3"> Review </h4>
+
+        <form action="/review" method="post" data-aos="zoom">
+            <div class="inputBox">
+                <input type="text" placeholder="name" name="name" data-aos="fade-up">
+                <input type="email" placeholder="email" name="email" data-aos="fade-up">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="number" name="number" data-aos="fade-up">
+                <input type="date" name="date" data-aos="fade-up">
+            </div>
+            <textarea name="review" placeholder="your review" id="" cols="30" rows="10" data-aos="fade-up"></textarea>
+            <button type="submit" class="btn2">Send Review</button>
+        </form>
+
+
+    </section>
+
+    <footer>
+        <section class="footer">
+            <div class="box-container">
+                <div class="box" data-aos="fade-up">
+                    <h3> <i class="fas fa-user"></i> RestaurantBEE </h3>
+                </div>
+                <div class="box" data-aos="fade-up">
+                    <h3>Our Services</h3>
+                    <a href="#"><i class="fas fa-chevron-right"></i> Birthday Celebrations</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i> Wdding Party</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i> Occasional Party</a>
+                    <a href="#"><i class="fas fa-chevron-right"></i> Surprise Celebrations</a>
+                </div>
+                <div class="box" data-aos="fade-up">
+                    <h3>Contact Us</h3>
+                    <a href="#"><i class="fas fa-phone"></i> +91-1234567890</a>
+                    <a href="#"><i class="fas fa-phone"></i> +91-0987654321</a>
+                    <a href="#"><i class="fas fa-envelope"></i> info@restrauntbee.com</a>
+                    <a href="#"><i class="fas fa-map"></i> 123456, GLAU Mathura</a>
+                </div>
+                <div class="box" data-aos="fade-up">
+                    <h3>Follow Us</h3>
+                    <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                    <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                    <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                </div>
+            </div>
+            <div class="credit">&copy; copyright @ 2024 by <span>restaurantbee</span></div>
+
+            <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up" ></i></button>
+
+        </section>
+    </footer>
+</body>
+<script>
+    let mybutton = document.getElementById("scrollToTopBtn");
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    mybutton.onclick = function() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+</script>
+
+
+</html>

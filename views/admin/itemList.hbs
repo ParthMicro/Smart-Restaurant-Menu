@@ -1,0 +1,26 @@
+<h1>Item List</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each items}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.description}}</td>
+      <td>{{this.price}}</td>
+      <td>
+        <a href="/admin/edit/{{this._id}}">Edit</a>
+        <form action="/admin/delete/{{this._id}}" method="POST" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

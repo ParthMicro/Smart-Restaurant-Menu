@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestaurantBEE | Sign Up</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="logo"><img src="/images/restaurantBEE.png" alt="logo"></div>
+    <div class="card">
+        <div class="card-header">
+            <h1>Sign Up</h1>
+        </div>
+        <div class="card-body">
+            <form action="/signup" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input id="name" name="name" type="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" type="password" placeholder="Enter your password">
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <a href="/">Go back to login page</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            {{#if error}}
+            alert("{{error}}");
+            {{/if}}
+        });
+    </script>
+</body>
+</html>
